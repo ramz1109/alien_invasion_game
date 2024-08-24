@@ -25,6 +25,11 @@ class Settings:
 
         #How quickly the game speeds up
         self.speedup_scale = 1.1
+        # How quicklu the alien point values increase
+        self.score_scale = 1.5
+
+        # Scoring settings
+        self.alien_points = 50
         
         self.initialize_dynamic_settings()
 
@@ -43,4 +48,4 @@ class Settings:
         self.bullet_speed *= self.speedup_scale
         self.alien_speed *= self.speedup_scale
 
-        
+        self.alien_points = int(self.alien_points * self.score_scale)
